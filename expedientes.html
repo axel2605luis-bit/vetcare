@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expedientes · VetCare</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="expedientes">
+
+<div id="site-header"></div>
+
+<main class="main-container">
+  <div class="page-head">
+    <div>
+      <h1>Expediente clínico</h1>
+      <p>Busca por nombre de mascota, dueño o ID de expediente.</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="grid-template-columns: 340px 1fr;">
+    <section class="panel">
+      <div class="toolbar">
+        <input type="text" id="expSearch" placeholder="Ej. Luna o EXP-002" autocomplete="off" aria-label="Buscar expediente">
+      </div>
+      <div class="exp-list" id="expList"></div>
+    </section>
+
+    <section class="panel detail" id="expDetail"></section>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Clínica Veterinaria VetCare. Proyecto Académico — Grupo 501.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

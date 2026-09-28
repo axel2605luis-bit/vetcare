@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VetCare · Plataforma clínica veterinaria</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="inicio">
+
+<div id="site-header"></div>
+
+<main class="main-container">
+
+  <section class="hero-section" id="inicio">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Clínica Veterinaria VetCare</span>
+      <h1>Cada mascota, un expediente. Cada cita, sin fricción.</h1>
+      <p>Agenda, historial clínico y panel administrativo en una sola plataforma, pensada para recepción, médicos y dueños de mascotas.</p>
+      <div class="hero-actions">
+        <a href="citas.html" class="hero-btn" id="scheduleBtn">Agendar Nueva Cita</a>
+        <a href="dashboard.html" class="hero-btn-secondary">Ver Dashboard</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric"><strong>1,240+</strong><span>expedientes activos</span></div>
+        <div class="metric"><strong>98%</strong><span>citas confirmadas a tiempo</span></div>
+        <div class="metric"><strong>3</strong><span>consultorios en línea</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img src="assets/veterinaria.jpeg" alt="Veterinaria abrazando a un perro en el consultorio" class="hero-visual-img" onerror="this.style.display='none'">
+      <div class="hero-preview-card">
+        <div class="preview-header">
+          <span class="preview-title">Próximas citas</span>
+          <span class="badge badge-cyan" id="agendaCount"></span>
+        </div>
+        <ul class="preview-list" id="agendaHoy"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="modules-section" id="modulos">
+    <div class="section-heading">
+      <h2>Módulos del sistema</h2>
+      <p>Todo lo que necesita el equipo de VetCare, organizado por rol.</p>
+    </div>
+
+    <div class="cards-grid" id="cardsGrid">
+
+      <article class="card" data-keywords="citas calendario agenda reservar horario">
+        <div class="card-media">
+          <img src="assets/luna.jpeg" alt="Golden retriever sentado en un parque" onerror="this.style.display='none'">
+          <span class="badge badge-blue card-badge">Dueños de mascotas</span>
+        </div>
+        <div class="card-body">
+          <h3>Módulo de Citas</h3>
+          <p>Calendario interactivo para dueños de mascotas. Selecciona día, hora y recibe tu pase digital de confirmación al instante.</p>
+          <div class="card-actions">
+            <button class="card-btn card-btn-primary" data-href="citas.html">Ver Citas</button>
+            <button class="card-btn card-btn-secondary" data-info="Agenda una cita, filtra por estado y confírmala o cancélala.">Detalles</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-keywords="expediente historial alergias recetas consultas">
+        <div class="card-media">
+          <img src="assets/perro2.jpeg" alt="Niña abrazando a su perro" onerror="this.style.display='none'">
+          <span class="badge badge-cyan card-badge">Médicos veterinarios</span>
+        </div>
+        <div class="card-body">
+          <h3>Expediente Clínico</h3>
+          <p>Búsqueda rápida por número de expediente, historial de alergias, consultas pasadas y registro de recetas médicas.</p>
+          <div class="card-actions">
+            <button class="card-btn card-btn-primary" data-href="expedientes.html">Consultar Expediente</button>
+            <button class="card-btn card-btn-secondary" data-info="Busca por mascota, dueño o ID y revisa vacunas, alergias y recetas.">Detalles</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-keywords="dashboard panel administracion inventario reportes financieros">
+        <div class="card-media">
+          <img src="assets/perro3.jpeg" alt="Perros y gatos de la clínica" onerror="this.style.display='none'">
+          <span class="badge badge-navy card-badge">Administración</span>
+        </div>
+        <div class="card-body">
+          <h3>Dashboard Global</h3>
+          <p>Panel centralizado para administración, control de inventario farmacéutico y reportes financieros generales.</p>
+          <div class="card-actions">
+            <button class="card-btn card-btn-primary" data-href="dashboard.html">Abrir Panel</button>
+            <button class="card-btn card-btn-secondary" data-info="Requiere iniciar sesión en Acceso Staff. Incluye métricas e inventario.">Detalles</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="no-results" id="noResults" hidden>No se encontraron módulos que coincidan con tu búsqueda.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Clínica Veterinaria VetCare. Proyecto Académico — Grupo 501.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

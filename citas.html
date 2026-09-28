@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Citas · VetCare</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="citas">
+
+<div id="site-header"></div>
+
+<main class="main-container">
+  <div class="page-head">
+    <div>
+      <h1>Agendar cita</h1>
+      <p>Registra la visita de tu mascota y consulta el estado de tus citas.</p>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <section class="panel">
+      <img src="assets/luna.jpeg" alt="Mascotas de la clínica" class="panel-img" onerror="this.style.display='none'">
+      <h2>Nueva cita</h2>
+      <form class="form" id="citaForm">
+        <div class="row">
+          <label>Nombre de la mascota
+            <input type="text" name="mascota" placeholder="Ej. Luna" required>
+          </label>
+          <label>Nombre del dueño
+            <input type="text" name="dueno" placeholder="Ej. Ana Ruiz" required>
+          </label>
+        </div>
+        <label>Especie / Raza
+          <input type="text" name="especie" placeholder="Ej. Canino · Golden Retriever" required>
+        </label>
+        <div class="row">
+          <label>Fecha
+            <input type="date" name="fecha" required>
+          </label>
+          <label>Hora
+            <input type="time" name="hora" min="08:00" max="19:00" required>
+          </label>
+        </div>
+        <label>Motivo de consulta
+          <textarea name="motivo" rows="3" placeholder="Ej. Vacunación anual" required></textarea>
+        </label>
+        <button type="submit" class="hero-btn">Agendar cita</button>
+      </form>
+      <div class="cita-ok" id="citaOk" role="status" hidden></div>
+    </section>
+
+    <section class="panel">
+      <h2>Citas agendadas <span class="badge badge-blue" id="citasCount"></span></h2>
+      <div class="toolbar">
+        <select id="filtroEstado" aria-label="Filtrar por estado">
+          <option value="">Todos los estados</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Confirmada">Confirmada</option>
+          <option value="Cancelada">Cancelada</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Paciente</th><th>Fecha y hora</th><th>Motivo</th><th>Estado</th><th>Acciones</th></tr></thead>
+          <tbody id="citasBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Clínica Veterinaria VetCare. Proyecto Académico — Grupo 501.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script defer src="vendor/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

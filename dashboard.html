@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · VetCare</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="dashboard">
+
+<div id="site-header"></div>
+
+<main class="main-container">
+  <div class="page-head">
+    <div>
+      <h1>Panel de administración</h1>
+      <p>Resumen del día e inventario farmacéutico.</p>
+    </div>
+    <button class="card-btn card-btn-secondary" id="logout">Cerrar sesión</button>
+  </div>
+
+  <div class="stats">
+    <article class="panel stat"><span>Pacientes atendidos hoy</span><strong id="mPacientes">0</strong><span class="badge badge-blue">Consultas del día</span></article>
+    <article class="panel stat"><span>Ingresos del día</span><strong id="mIngresos">$0</strong><span class="badge badge-cyan">Estimado</span></article>
+    <article class="panel stat"><span>Medicamentos por agotar</span><strong id="mAgotar">0</strong><span class="badge badge-navy">Requieren reabasto</span></article>
+  </div>
+
+  <div class="grid-2" style="grid-template-columns: 1.4fr 1fr; margin-bottom: 26px;">
+    <section class="panel">
+      <h2>Consultas de la última semana</h2>
+      <div class="chart" id="chart"></div>
+    </section>
+    <section class="panel">
+      <h2>Agenda: hoy y próximas</h2>
+      <ul class="recent" id="recent"></ul>
+    </section>
+  </div>
+
+  <section class="panel">
+    <h2>Inventario farmacéutico</h2>
+    <div class="toolbar">
+      <input type="text" id="invSearch" placeholder="Buscar producto…" autocomplete="off" aria-label="Buscar producto">
+      <select id="invEstado" aria-label="Filtrar por estado">
+        <option value="">Todos los estados</option>
+        <option value="Óptimo">Óptimo</option>
+        <option value="Por reabastecer">Por reabastecer</option>
+        <option value="Agotado">Agotado</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Producto</th><th>Stock disponible</th><th>Estado de reabastecimiento</th><th>Acción</th></tr></thead>
+        <tbody id="invBody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Clínica Veterinaria VetCare. Proyecto Académico — Grupo 501.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

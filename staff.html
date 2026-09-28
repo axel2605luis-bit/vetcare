@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso Staff · VetCare</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="staff">
+
+<div id="site-header"></div>
+
+<main class="main-container">
+  <section class="panel login-card">
+    <img src="assets/veterinaria.jpeg" alt="Veterinaria de VetCare con un perro" class="panel-img staff-photo" onerror="this.style.display='none'">
+    <h2>Acceso para personal clínico</h2>
+    <p style="color:#5d7191;font-size:14px;margin-bottom:18px;">Ingresa con tu usuario para abrir el panel de administración.</p>
+    <form class="form" id="loginForm">
+      <label>Usuario
+        <input type="text" id="user" placeholder="Ej. Nataly Lopez" autocomplete="username" required>
+      </label>
+      <label>Contraseña
+        <input type="password" id="pass" placeholder="••••••••" autocomplete="current-password" required>
+      </label>
+      <p class="form-error" id="loginError"></p>
+      <button type="submit" class="hero-btn">Iniciar sesión</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Clínica Veterinaria VetCare. Proyecto Académico — Grupo 501.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="staff-auth.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

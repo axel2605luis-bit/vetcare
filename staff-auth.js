@@ -1,0 +1,2 @@
+/* Generado por staff_auth.py — NO editar a mano. Solo contiene hashes. */
+window.STAFF_AUTH=[{"user":"Martin Tenorio","nombre":"Administración","salt":"FdNl719yHVFO3pVKUWP+Mg==","hash":"vN0SViqsEvQcZwoUSBgsVcwkszo4OnklJTYPPyzCTAs=","iter":200000},{"user":"Nataly Lopez","nombre":"Recepción","salt":"qlbJDV+OVTgEqjnLlba9nQ==","hash":"rH3D0mtZO+9LDsQ8aO1yoTff61pdHNb0fo8fAPtyHuE=","iter":200000},{"user":"Alan Epifanio","nombre":"Médico veterinario","salt":"erlbcnI+8rwm7iWs1Dl9ZQ==","hash":"Kh3NnxpIaJfXTUmCzpmCc/Zolfaf5zoq7bZp3InTQ04=","iter":200000}];
